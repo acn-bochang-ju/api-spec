@@ -1,0 +1,39 @@
+#%RAML 1.0
+title: some-domain-papi
+
+types:
+  dataType:
+    type: !include data-types/dataType.raml
+
+/some-resources:
+  /actionOne:
+    post:
+      body:
+        application/json:
+          type: dataType
+  /actionTwo:
+    post:
+      body:
+        application/json:
+          type: dataType
+  /actionThree:
+    post:
+      body:
+        application/json:
+          type: dataType
+  /actionFour:
+    post:
+      body:
+        application/json:
+          type: dataType
+  /actionFive:
+    post:
+      body:
+        application/json:
+          type: dataType
+  /actionSix:
+    post:
+      body:
+        application/json:
+          type: dataType
+  
