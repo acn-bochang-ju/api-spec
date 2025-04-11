@@ -29,10 +29,10 @@ jobs:
     - name: Install API Catalog CLI
       run: npm install -g api-catalog-cli@latest
     - name: Set Organization Id
-      run: api-catalog conf organization ${{ secret.anypointOrgId }}
+      run: api-catalog conf organization ${{ secrets.CONNECTED_APP_CLIENT_ID }}
     - name: Set Connected App Client Id
-      run: api-catalog conf client_id ${{ secret.connectedAppClientId }}
+      run: api-catalog conf client_id ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
     - name: Set Connected App Client Secret
-      run: api-catalog conf client_secret ${{ secret.connectedAppClientSecret }}
+      run: api-catalog conf client_secret ${{ vars.ANYPOINT_ORG_ID }}
     - name: Validate Descripter File
       run: api-catalog publish-asset --dry-run --verbose
