@@ -35,4 +35,4 @@ jobs:
     - name: Set Connected App Client Secret
       run: api-catalog conf client_secret ${{ secret.connectedAppClientSecret }}
     - name: Validate Descripter File
-    - run: api-catalog publish-asset --dry-run --verbose
+      run: api-catalog publish-asset --dry-run --verbose
