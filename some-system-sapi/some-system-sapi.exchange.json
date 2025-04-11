@@ -1,0 +1,6 @@
+{
+  "main": "some-system-sapi.raml",
+  "assetId": "some-system-sapi",
+  "version": "1.0.0",
+  "apiVersion": "v1"
+}

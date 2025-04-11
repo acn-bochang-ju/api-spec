@@ -1,0 +1,6 @@
+{
+  "main": "some-channel-eapi.raml",
+  "assetId": "some-channel-eapi",
+  "version": "1.0.0",
+  "apiVersion": "v1"
+}

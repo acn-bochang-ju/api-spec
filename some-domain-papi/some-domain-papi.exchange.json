@@ -1,0 +1,6 @@
+{
+  "main": "some-domain-papi.raml",
+  "assetId": "some-domain-papi",
+  "version": "1.0.0",
+  "apiVersion": "v1"
+}

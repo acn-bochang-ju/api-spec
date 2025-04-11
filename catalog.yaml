@@ -1,0 +1,6 @@
+#%Catalog Descriptor 1.0
+projects:
+  - ref: some-channel-eapi/some-channel-eapi.exchange.json
+  - ref: some-domain-papi/some-domain-papi.exchange.json
+  - ref: some-system-sapi/some-channel-eapi.exchange.json
+  - ref: some-system-sapi/some-system-sapi.exchange.json
