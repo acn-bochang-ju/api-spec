@@ -1,0 +1,29 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Validate Descripter
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+    - name: Install API Catalog CLI
+      run: npm install -g api-catalog-cli@latest
+    - name: Set Organization Id
+      run: api-catalog conf organization ${{ vars.ANYPOINT_ORG_ID }}
+    - name: Set Connected App Client Id
+      run: api-catalog conf client_id ${{ secrets.CONNECTED_APP_CLIENT_ID }}
+    - name: Set Connected App Client Secret
+      run: api-catalog conf client_secret ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+    - name: Validate Descripter File
+      run: api-catalog publish-asset --dry-run --verbose
